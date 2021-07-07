@@ -1,0 +1,135 @@
+body {
+    /* background: #17777a; */
+    /* color: #fff; */
+    margin: 2rem;
+}
+
+/* .error{
+    color:red;
+} */
+.error{
+    color:red;
+    font-style:italic;
+    font-weight: bold;
+}
+
+label {
+    margin-left: -36rem;
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 90%;
+    width: 680px;
+    text-align: center;
+    padding-top: 8rem;
+}
+/* input[type='submit'] .btn .input-danger{
+    padding: 2.5px;
+} */
+.url-shortened {
+    margin: 0 auto;
+    max-width: 90%;
+    width: 680px;
+    text-align: center;
+    padding-top: 15rem;
+}
+
+h3>a {
+    color: #fafa;
+}
+
+h3>a:hover {
+    color: hsl(51, 100%, 84%);
+}
+
+input[type='text'] {
+    /* border: none; */
+    width: 85%;
+    padding: .8rem .5rem;
+}
+
+/* input[type='submit'] {
+    border: none;
+    padding: .8rem .5rem;
+} */
+
+/* input[type='submit']:hover {
+    background: #fff;
+} */
+
+
+
+.mbottom{
+    margin-top: 4rem;
+}
+
+p {
+    text-align: justify;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.errors-msg {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Demande */
+.date{
+    float: right;
+    margin-right: 6rem;
+}
+.boss{
+    float: right;
+    margin-right: 10rem;
+    margin-top: -7rem;
+}
+.infoPerso{
+    margin-left: 2rem;
+}
+.objet{
+    margin-left: 2rem;
+    margin-top: 3rem;
+}
+.corps{
+    margin-left: 2rem;
+}
+.monsieur{
+    margin-left: 6rem;
+}
+span.text-decoretion-underline{
+    text-decoration: underline;
+}
+
+/** laramap **/
+.size-16{
+    font-weight: 900;
+}
+sup>i.text-blue{
+    font-size: 3rem;
+    margin-top: .5rem;
+    color: blue;
+    
+}
+sup.sup-blue{
+    color: red;
+}
+
+@media screen and (max-width: 767px)  {
+   li.nav-item{
+       margin: auto .5rem auto .5rem;
+   } 
+}

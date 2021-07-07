@@ -1,0 +1,1 @@
+<p class="text-center">Copyright &copy {{date('Y')}} | All rights reserved </p>

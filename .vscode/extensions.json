@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "felixfbecker.php-intellisense",
+        "tnode-autocomplete.vscode-tnode-autocomplete",
+        "atishay-jain.all-autocomplete",
+        "bmewburn.vscode-intelephense-client",
+        "small.php-ci",
+        "formulahendry.auto-complete-tag",
+        "dbaeumer.jshint",
+        "bajdzis.vscode-database",
+        "mtxr.sqltools",
+        "ikappas.phpcs",
+        "ms-ceintl.vscode-language-pack-fr",
+        "firefox-devtools.vscode-firefox-debug"
+    ]
+}
