@@ -15,20 +15,20 @@
                     <div class="form-group">
                         <span for="username">Username <sup class="text-danger">*</sup> </span>
                         <input type="" name="username"  id="username" placeholder="Enter Your Username"
-                            class="form-control mb-2 {{ $errors->has('username') ? 'is-invalid':'' }}" value="{{-- old('username')??$field->username --}}">
+                            class="form-control mb-2 {{ $errors->has('username') ? 'is-invalid':'' }}" value="{{old('username')}}">
                             {!! $errors->first('username','<span class="error invalid-feedback">:message</span>') !!}
                     </div>
                     <div class="form-group">
                         <span for="email">Email <sup class="text-danger">*</sup> </span>
                         <input type="email"  name="email" placeholder="Enter Your Email Adress" id="email"
-                            class="form-control {{ $errors->has('email') ? 'is-invalid':'' }}" value="{{-- old('email')??$field->email --}}">
+                            class="form-control {{ $errors->has('email') ? 'is-invalid':'' }}" value="{{old('email') }}">
                             {!! $errors->first('email','<span class="error invalid-feedback">:message</span>') !!}
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <span for="message_content">Message <sup class="text-danger">*</sup> </span>
-                        <textarea name="message_content"  id="message_content" placeholder="Enter Your Message" rows="4" class="form-control {{ $errors->has('message_content') ? 'is-invalid':'' }}">{{-- old('message_content')??$field->message_content --}}</textarea>
+                        <textarea name="message_content"  id="message_content" placeholder="Enter Your Message" rows="4" class="form-control {{ $errors->has('message_content') ? 'is-invalid':'' }}">{{ old('message_content')}}</textarea>
                             {!! $errors->first('message_content','<span class="error invalid-feedback">:message</span>') !!}
                     </div>
                 </div>
