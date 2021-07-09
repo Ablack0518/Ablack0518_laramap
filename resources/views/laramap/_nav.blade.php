@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('laramap.index') }}">LaraMap</a>
+        <a class="navbar-brand" href="{{ route('laramap-path') }}">LaraMap</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,10 +12,10 @@
                         <a class="nav-link {{ setActiveClass('root_path') }}" href="{{ route('root_path') }}">AppTest</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-pills {{ setActiveClass('laramap.index') }}" aria-current="page" href="{{ route('laramap.index') }}">Home</a>
+                        <a class="nav-link nav-pills {{ setActiveClass('laramap-path') }}" aria-current="page" href="{{ route('laramap-path') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ setActiveClass('larmap_about') }}" href="{{ route('larmap_about') }}">About</a>
+                        <a class="nav-link {{ setActiveClass('laramap_about') }}" href="{{ route('laramap_about') }}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Artisans</a>
@@ -35,7 +35,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ setActiveClass('contact') }} " href="{{ route('contact') }}">Contact-us</a>
+                        <a class="nav-link {{ setActiveClass('laramap_contact') }} " href="{{ route('laramap_contact') }}">Contact-us</a>
                     </li>
                 </em>
             </ul>

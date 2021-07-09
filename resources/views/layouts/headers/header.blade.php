@@ -23,7 +23,7 @@
                         <a class="nav-link" href="{{ route('root_events') }}">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('laramap.index') }}">Laramap</a>
+                        <a class="nav-link" href="{{ route('laramap-path') }}">Laramap</a>
                     </li>
                 </ul>
                 <!--<form class="d-flex">

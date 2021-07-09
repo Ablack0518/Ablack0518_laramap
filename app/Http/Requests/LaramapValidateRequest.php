@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ValidateFormRequest extends FormRequest
+class LaramapValidateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,9 @@ class ValidateFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:4',
-            'content' => 'required|min:10',
+            'username' => 'required|min:4',
+            'email' => 'required|email',
+            'message_content' => 'required|min:15',
         ];
     }
 }

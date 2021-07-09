@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
-use App\Http\Requests\ValidateFormRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\LaramapValidateRequest;
 
-
-class ContactsController extends Controller
+class LaramapsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        //
+        return view('laramap.index');
     }
 
     /**
@@ -34,9 +35,17 @@ class ContactsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(validateFormRequest $request)
+    public function store(LaramapValidateRequest $request)
     {
-        dd([$request->username, $request->email, $request->message]);
+        /*$this->validate($request, [
+            'username' => 'required|min:4',
+            'email' => 'required|email',
+            'message_content' => 'required|min:15'
+        ],);*/
+        //dd('validate', [$request->username, $request->email, $request->message_content]);
+        $emailSend = new ContactMail($request->username, $request->email, $request->message_content);
+        Mail::to('admin_@fotscaar-itech.net')->send($emailSend);
+        return 'The message has been sent successfully';
     }
 
     /**

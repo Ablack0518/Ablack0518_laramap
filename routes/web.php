@@ -1,13 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Mail\ContactMail;
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UrlsController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\EventsController;
-use App\Http\Controllers\LaramapController;
-use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\LaramapsController;
 
 
 /*
@@ -28,12 +28,10 @@ Route::view('/about', 'pages.about')->name('about_path');
 
 
 /** LaraMap Projet **/
-Route::get('/laramap', [LaramapController::class, 'index'])->name('laramap');
-Route::view('/laramap/about', 'laramap.about')->name('larmap_about');
-Route::get('/laramap/contact', [ContactsController::class, 'create'])->name('contact');
-//Route::post('/laramap/contact', [ContactsController::class, 'store']);//we can use this route with action on form 'contact'
-Route::resource('laramap', LaramapController::class);
-Route::resource('contact', ContactsController::class);
+Route::get('/laramap', [LaramapsController::class, 'index'])->name('laramap-path');
+Route::view('/laramap/about', 'laramap.about')->name('laramap_about');
+Route::get('/laramap/contact', [LaramapsController::class, 'create'])->name('laramap_contact');
+Route::resource('laramaps', LaramapsController::class);
 
 
 

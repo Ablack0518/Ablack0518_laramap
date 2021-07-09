@@ -4,7 +4,7 @@
     <div class="mbottom"></div>
     <h1 class="text-center">Contact-us <sup class="sup-blue"><a href="mailto:armellefotsing88@gmail.com"><i class="las la-envelope text-blue"></i></a></sup></h1>
     <div class="container">
-        <form action="{{ route('contact.store') }}" method="POST" novalidate>
+        <form action="{{route('laramaps.store') }}" method="POST">
             <div class="row">
                 <div class="col-md-8 col-offset-2 col-lg-10 col-offset-1">
                     <h2>Get in touch</h2>
@@ -14,23 +14,22 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <span for="username">Username <sup class="text-danger">*</sup> </span>
-                        <input type="" name="username" required id="username" placeholder="Enter Your Username"
-                            class="form-control mb-2 {{ $errors->has('username') ? 'is-invalid':'' }}">
+                        <input type="" name="username"  id="username" placeholder="Enter Your Username"
+                            class="form-control mb-2 {{ $errors->has('username') ? 'is-invalid':'' }}" value="{{-- old('username')??$field->username --}}">
                             {!! $errors->first('username','<span class="error invalid-feedback">:message</span>') !!}
                     </div>
                     <div class="form-group">
                         <span for="email">Email <sup class="text-danger">*</sup> </span>
-                        <input type="email" required name="email" placeholder="Enter Your Email Adress" id="email"
-                            class="form-control {{ $errors->has('email') ? 'is-invalid':'' }}">
+                        <input type="email"  name="email" placeholder="Enter Your Email Adress" id="email"
+                            class="form-control {{ $errors->has('email') ? 'is-invalid':'' }}" value="{{-- old('email')??$field->email --}}">
                             {!! $errors->first('email','<span class="error invalid-feedback">:message</span>') !!}
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <span for="message">Message <sup class="text-danger">*</sup> </span>
-                        <textarea name="message" required id="message" placeholder="Enter Your Message" rows="4"
-                            class="form-control {{ $errors->has('message') ? 'is-invalid':'' }}"></textarea>
-                            {!! $errors->first('message','<span class="error invalid-feedback">:message</span>') !!}
+                        <span for="message_content">Message <sup class="text-danger">*</sup> </span>
+                        <textarea name="message_content"  id="message_content" placeholder="Enter Your Message" rows="4" class="form-control {{ $errors->has('message_content') ? 'is-invalid':'' }}">{{-- old('message_content')??$field->message_content --}}</textarea>
+                            {!! $errors->first('message_content','<span class="error invalid-feedback">:message</span>') !!}
                     </div>
                 </div>
             </div>
@@ -40,4 +39,5 @@
             </div>
         </form>
     </div>
+    {{-- dd($field) --}}
 @stop
