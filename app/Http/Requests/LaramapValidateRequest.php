@@ -26,7 +26,7 @@ class LaramapValidateRequest extends FormRequest
         return [
             'username' => 'required|min:4',
             'email' => 'required|email',
-            'message_content' => 'required|min:15',
+            'message' => 'required|min:15',
         ];
     }
 }

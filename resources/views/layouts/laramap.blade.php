@@ -29,7 +29,9 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" ></script> --}}
     <script src='{{ asset('bootstrap/js/bootstrap.js') }}'></script>
-    <script src="{{-- asset('js/jquery.js') --}}"></script>
+    <script src="{{asset('js/jquery.js') }}"></script>
+
+    @include('flashy::message')
 </body>
 
 </html>

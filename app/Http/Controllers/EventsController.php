@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use MercurySeries\Flashy\Flashy;
 use App\Http\Requests\ValidateFormRequest;
 
 class EventsController extends Controller
@@ -43,6 +44,7 @@ class EventsController extends Controller
     {
         // validation is maked by the ValidateFormRequest
         Event::create(['title' => $request->title, 'content' => $request->content]);
+        flashy('Your event has been created');
         return redirect()->route('path_admin');
     }
 
@@ -80,6 +82,7 @@ class EventsController extends Controller
     {
         // validation is maked by the ValidateFormRequest
         $event->update(['title' => $request->title, 'content' => $request->content,]);
+        Flashy::primary('Your event is updating succesfuly');
         return redirect()->route('path_admin', $event);
     }
 
@@ -92,6 +95,7 @@ class EventsController extends Controller
     public function destroy(Event $event)
     {
         $event->delete();
+        flashy('event' . $event->title . 'is deleted');
         return redirect()->route('path_admin');
     }
 

@@ -1,11 +1,11 @@
 @component('mail::message')
 # Laramap
 
-- {{ $username }}
-- {{ $email }}
+- {{ $sms->username }}
+- {{ $sms->email }}
 
 @component('mail::panel')
-    {{ $message_content }}
+    {{ $sms->message }}
 @endcomponent
 
 @component('mail::button', ['url' => ''])

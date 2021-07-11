@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -42,10 +43,10 @@ class LaramapsController extends Controller
             'email' => 'required|email',
             'message_content' => 'required|min:15'
         ],);*/
-        //dd('validate', [$request->username, $request->email, $request->message_content]);
-        $emailSend = new ContactMail($request->username, $request->email, $request->message_content);
-        Mail::to('admin_@fotscaar-itech.net')->send($emailSend);
-        return 'The message has been sent successfully';
+        $message = Message::create(['username' => $request->username, 'email' => $request->email, "message" => $request->message]);
+        Mail::to(config('admin.admin_adress_mail'))->queue(new ContactMail($message));
+        flashy()->primary('Thank you the message has been sent succesfuly');
+        return redirect()->route('laramap-path');
     }
 
     /**
