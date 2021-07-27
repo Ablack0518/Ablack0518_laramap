@@ -45,7 +45,7 @@ class LaramapsController extends Controller
         ],);*/
         $message = Message::create($request->only("username", "email", 'message'));
         //$message = Message::create(['username' => $request->username, 'email' => $request->email, "message" => $request->message]);
-        Mail::to(config('admin.admin_adress_mail'))->queue(new ContactMail($message));
+        Mail::to(config('admin.admin_adress_mail'))->send(new ContactMail($message));
         flashy()->primary('Thank you the message has been sent succesfuly');
         return redirect()->route('laramap-path');
     }

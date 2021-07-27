@@ -8,7 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactMail extends Mailable
+class ContactMail extends Mailable implements shouldQueue
 {
     use Queueable, SerializesModels;
     public $sms;
@@ -30,6 +30,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.messages.index');
+        return $this->from($this->sms->email, $this->sms->username)
+            ->markdown('emails.messages.index');
     }
 }
