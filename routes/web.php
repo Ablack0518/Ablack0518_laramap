@@ -20,7 +20,7 @@ use App\Http\Controllers\LaramapsController;
 
 
 
-Route::view('/', 'welcome')->name('root_path');
+Route::view('/', 'welcome')->name('apptest');
 Route::view('/about', 'pages.about')->name('about_path');
 
 
@@ -42,8 +42,19 @@ Route::get('event/admin', [EventsController::class, 'admin'])->name('path_admin'
 /** Posts Projet **/
 Route::get('posts', [PostsController::class, 'index'])->name('posts_path');
 
+
 /** Url-shortener Projet **/
 Route::view('/url-short', 'pages.url-shortener')->name('url-short_path');
 Route::post('url-short', [UrlsController::class, 'store']);
 Route::get('/{urlShortened}', [UrlsController::class, 'show']);
 Route::get('/url', [UrlsController::class, 'showUrlshortened']);
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';

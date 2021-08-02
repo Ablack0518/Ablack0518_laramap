@@ -9,7 +9,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <em class="d-flex em-nav">
                     <li class="nav-item">
-                        <a class="nav-link {{ setActiveClass('root_path') }}" href="{{ route('root_path') }}">AppTest</a>
+                        <a class="nav-link {{ setActiveClass('apptest') }}" href="{{ route('apptest') }}">AppTest</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-pills {{ setActiveClass('laramap-path') }}" aria-current="page" href="{{ route('laramap-path') }}">Home</a>
