@@ -1,9 +1,6 @@
 <?php
 
-use App\Mail\ContactMail;
-
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UrlsController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\EventsController;
@@ -23,14 +20,14 @@ use App\Http\Controllers\LaramapsController;
 
 
 
-Route::get('/', HomeController::class)->name('root_path');
+Route::view('/', 'welcome')->name('root_path');
 Route::view('/about', 'pages.about')->name('about_path');
 
 
 /** LaraMap Projet **/
-Route::get('/laramap', [LaramapsController::class, 'index'])->name('laramap-path');
+Route::view('/laramap', 'laramap.index')->name('laramap-path');
 Route::view('/laramap/about', 'laramap.about')->name('laramap_about');
-Route::get('/laramap/contact', [LaramapsController::class, 'create'])->name('laramap_contact');
+Route::view('/laramap/contact', 'laramap.contact')->name('laramap_contact');
 Route::resource('laramaps', LaramapsController::class);
 
 

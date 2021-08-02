@@ -8,19 +8,19 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('root_path') }}">Home</a>
+                        <a class="nav-link {{ setActiveClass('root_path') }} " aria-current="page" href="{{ route('root_path') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/posts">Posts</a>
+                        <a class="nav-link {{ setActiveClass('posts_path') }} " href="{{ route('posts_path') }}">Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about" tabindex="-1" aria-disabled="false">About-Us</a>
+                        <a class="nav-link {{ setActiveClass('about_path') }} " href="{{ route('about_path') }}" tabindex="-1" aria-disabled="false">About-Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('url-short_path') }}">Url-shortener</a>
+                        <a class="nav-link {{ setActiveClass('url-short_path') }} " href="{{ route('url-short_path') }}">Url-shortener</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('root_events') }}">Events</a>
+                        <a class="nav-link {{ setActiveClass('root_events') }} " href="{{ route('root_events') }}">Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('laramap-path') }}">Laramap</a>

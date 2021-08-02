@@ -10,7 +10,7 @@
                     <h2>Get in touch</h2>
                     <p class="text-muted">If you having trouble with this service, pleace <a href="mailto:{{ config('admin.admin_adress_mail') }}">ask for help</a>.</p>
                 </div>
-                {{ csrf_field() }}
+                @csrf
                 <div class="col-md-6">
                     <div class="form-group">
                         <span for="username">Username <sup class="text-danger">*</sup> </span>

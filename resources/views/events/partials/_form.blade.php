@@ -1,4 +1,4 @@
-        {{ csrf_field() }}
+        @csrf
     {{-- <input type="hidden" name="_method" value="PUT">  autre façon--}}
     <div class="form-group">
         <label for="title" class="control-label"><strong>Title for Event</strong></label>
