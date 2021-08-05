@@ -20,6 +20,13 @@ use App\Http\Controllers\LaramapsController;
 
 
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
+
+
 Route::view('/', 'welcome')->name('apptest');
 Route::view('/about', 'pages.about')->name('about_path');
 
@@ -48,13 +55,3 @@ Route::view('/url-short', 'pages.url-shortener')->name('url-short_path');
 Route::post('url-short', [UrlsController::class, 'store']);
 Route::get('/{urlShortened}', [UrlsController::class, 'show']);
 Route::get('/url', [UrlsController::class, 'showUrlshortened']);
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
