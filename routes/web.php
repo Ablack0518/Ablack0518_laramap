@@ -20,7 +20,7 @@ use App\Http\Controllers\LaramapsController;
 
 
 
-Route::get('/dashboard', function () {
+Route::get('/laramap/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 

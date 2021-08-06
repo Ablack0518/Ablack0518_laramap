@@ -42,10 +42,10 @@
             <ul class="nav navbar-nav ">
                 <em class="d-flex em-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
+                        <a class="nav-link {{ setActiveClass('dashboard') }} " href="{{route('dashboard')}}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="#">Register</a>
                     </li>
                 </em>
             </ul>

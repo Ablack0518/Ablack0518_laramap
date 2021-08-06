@@ -1,3 +1,6 @@
+@extends('layouts.laramap',['title'=>'_login'])
+
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
