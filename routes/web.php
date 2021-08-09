@@ -51,9 +51,9 @@ Route::get('posts', [PostsController::class, 'index'])->name('posts_path');
 
 
 /** Url-shortener Projet **/
-// if (Route::view('/url-short', 'pages.url-shortener')) {
-//     Route::view('/url-short', 'pages.url-shortener')->name('url-short_path');
-//     Route::post('url-short', [UrlsController::class, 'store']);
-//     Route::get('/{urlShortened}', [UrlsController::class, 'show']);
-//     Route::get('/url', [UrlsController::class, 'showUrlshortened']);
-// }
+if (Route::view('/url-short', 'pages.url-shortener')) {
+    Route::view('/url-short', 'pages.url-shortener')->name('url-short_path');
+    Route::post('url-short', [UrlsController::class, 'store']);
+    Route::get('/{urlShortened}', [UrlsController::class, 'show']);
+    Route::get('/url', [UrlsController::class, 'showUrlshortened']);
+}
