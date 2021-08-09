@@ -39,16 +39,38 @@
                     </li>
                 </em>
             </ul>
-            <ul class="nav navbar-nav ">
-                <em class="d-flex em-nav">
-                    <li class="nav-item">
-                        <a class="nav-link {{ setActiveClass('dashboard') }} " href="{{route('dashboard')}}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
-                    </li>
-                </em>
-            </ul>
+            @guest
+                <ul class="nav navbar-nav ">
+                    <em class="d-flex em-nav">
+                        <li class="nav-item">
+                            <a class="nav-link {{ setActiveClass('login') }} " href="{{route('login')}}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ setActiveClass('register') }} " href="{{ route('register') }}">Register</a>
+                        </li>
+                    </em>
+                </ul>
+            @else
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" style="color:white; margin-right:5rem;"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+    
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </a>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            @endguest
             <form class="d-flex">
 
             </form>

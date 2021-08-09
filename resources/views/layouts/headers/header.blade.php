@@ -16,9 +16,9 @@
                     <li class="nav-item">
                         <a class="nav-link {{ setActiveClass('about_path') }} " href="{{ route('about_path') }}" tabindex="-1" aria-disabled="false">About-Us</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link {{ setActiveClass('url-short_path') }} " href="{{ route('url-short_path') }}">Url-shortener</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link {{ setActiveClass('root_events') }} " href="{{ route('root_events') }}">Events</a>
                     </li>
