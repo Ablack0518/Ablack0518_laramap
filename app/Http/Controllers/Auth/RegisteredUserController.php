@@ -48,7 +48,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
-
+        flashy()->primary(Auth::user()->name .' You are registed');
         return redirect(RouteServiceProvider::HOME());
     }
 }

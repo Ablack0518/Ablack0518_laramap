@@ -50,17 +50,28 @@ body {
   margin: 8rem 0 0 0;
   padding: 0 3rem 0 3rem;
 }
-/* .mbottom{
-  margin-top: 110px;
-} */
-/* .min-h-screen{
-  margin: 0 0 -7rem 0;
+
+
+sup.sup-blue{
+  color: blue;
 }
-@media and screen (min-width:768px){
-  .min-h-screen{
-    margin: -7rem 0 -7rem 0;
+.font-size-18{
+  font-size: 18px;
+}
+footer.mtf-5{
+  margin-top: 3rem;
+}
+
+@media (max-width:766px){
+  .nav-link{
+    margin: .5rem;
   }
-} */
+} 
+
+
+
+
+
 /**
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 */
@@ -456,6 +467,7 @@ input::placeholder,
 textarea::placeholder {
   opacity: 1;
   color: #9ca3af;
+  /* text-align:center; */
 }
 
 button,
@@ -483,7 +495,7 @@ h6 {
  */
 
 a {
-  color: inherit;
+  /* color: inherit; */
   text-decoration: inherit;
 }
 

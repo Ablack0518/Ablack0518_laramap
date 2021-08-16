@@ -31,6 +31,7 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+        flashy()->primary(Auth::user()->name.' You are logged');
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }
@@ -48,6 +49,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
+        flashy()->primary('Your are disconnected');
 
         return redirect('/laramap');
     }

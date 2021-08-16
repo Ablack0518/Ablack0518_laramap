@@ -17,19 +17,21 @@
 
 <body class="antialiased">
     @include('laramap._nav')
-    <main>
+    <main class="" role="main">
         @yield('content')
     </main>
 
-    <footer class="mt-5">
-            <p class="text-center">Copyright{{-- &copy; --}} {{ date('Y') }} &middot; Laramap by <a href="https://twitter/@ablack237">@ablack237</a> &dash; A <a href="https://www.laramap.com">laramap</a> clone app &middot; {{-- |Allrightsreserved --}} </p>
-            <p class="text-center"><strong>This app has bluilt for leaning purposes.</strong></p>
+    <footer class="mtf-5">
+        <p class="text-center">Copyright{{-- &copy; --}} {{ date('Y') }} &middot; Laramap by <a
+                href="https://twitter/@ablack237">@ablack237</a> &dash; A <a href="https://www.laramap.com">laramap</a>
+            clone app &middot; {{-- |Allrightsreserved --}} </p>
+        <p class="text-center"><strong>This app has bluilt for leaning purposes.</strong></p>
     </footer>
     @stack('js')
     {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" ></script> --}}
     <script src='{{ asset('bootstrap/js/bootstrap.js') }}'></script>
-    <script src="{{asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
 
     @include('flashy::message')
 </body>

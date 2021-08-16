@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="mbottom"></div>
-    <h1 class="text-center">Contact-us <sup class="sup-blue"><a href="mailto:armellefotsing88@gmail.com"><i class="las la-envelope text-blue"></i></a></sup></h1>
+    <h1 class="text-center">Contact-us <sup class="sup-blue font-size-18"><a href="mailto:armellefotsing88@gmail.com"><i class="las la-envelope text-blue"></i></a></sup></h1>
     <div class="container">
         <form action="{{route('laramaps.store') }}" method="POST">
             <div class="row">

@@ -71,9 +71,6 @@
                     </ul>
                 </li>
             @endguest
-            <form class="d-flex">
-
-            </form>
         </div>
     </div>
 </nav>
