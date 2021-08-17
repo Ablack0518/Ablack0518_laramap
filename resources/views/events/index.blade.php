@@ -25,7 +25,7 @@
                     @endif
                 </article>
             @endforeach
-            {{-- {{ $events->links() }} --}}
+            {{ $events->links() }}
         </div>
     @else
         <h1>Not Event Now</h1>

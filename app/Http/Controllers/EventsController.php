@@ -16,7 +16,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = Event::get();
+        $events = Event::paginate(2);
         //dd($events);
         $time = $this->time();
         return view('events.index', compact('events', 'time'));
