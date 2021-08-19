@@ -34,7 +34,7 @@ Route::view('/about', 'pages.about')->name('about_path');
 /** LaraMap Projet **/
 Route::view('/laramap', 'laramap.index')->name('laramap-path');
 Route::view('/laramap/about', 'laramap.about')->name('laramap_about');
-Route::view('/laramap/contact', 'laramap.contact')->name('laramap_contact');
+Route::view('/laramap/contact', 'laramap.contact')->middleware('auth')->name('laramap_contact');
 Route::resource('laramaps', LaramapsController::class);
 
 
