@@ -6,7 +6,6 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\LaramapsController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,13 +18,11 @@ use App\Http\Controllers\LaramapsController;
 */
 
 
-
 Route::get('/laramap/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
-
 
 Route::view('/', 'welcome')->name('apptest');
 Route::view('/about', 'pages.about')->name('about_path');
